@@ -8,6 +8,10 @@
 
     <!-- custom css file link -->
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 </head>
 <body>
     <!-- header section start -->
@@ -16,7 +20,8 @@
 
         <nav class="navbar">
             <a href="#home" class="active">home</a>
-            <a href="#about">about</a>
+            <a href="#favorite">favorite</a>
+            <a href="#about">about us</a>
             <a href="#menu">menu</a>
             <a href="#team">team</a>
             <a href="#reservation">reservation</a>
@@ -36,11 +41,11 @@
 
     <!-- slider section start -->
     <div class="home" id="home">
-        <div class="home-slider">
-            <div class="wrapper">
-                <div class="slide slide1">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide slide1">
                     <div class="content">
-                        <img src="./images/navbar/crown-symbol.png" alt="">
+                        <!-- <img src="./images/navbar/crown-symbol.png" alt=""> -->
                         <h3> Grilli </h3>
                         <h1> Gift Voucher </h1>
                         <p>
@@ -50,9 +55,9 @@
                     </div>
                 </div>
 
-                <div class="slide slide2">
+                <div class="swiper-slide slide slide2">
                     <div class="content">
-                        <img src="./images/navbar/crown-symbol.png" alt="">
+                        <!-- <img src="./images/navbar/crown-symbol.png" alt=""> -->
                         <h3> sale of 10% this dish</h3>
                         <h1> The Fresh </h1>
                         <p>
@@ -62,9 +67,9 @@
                     </div>
                 </div>
 
-                <div class="slide slide3">
+                <div class="swiper-slide slide slide3">
                     <div class="content">
-                        <img src="./images/navbar/crown-symbol.png" alt="">
+                        <!-- <img src="./images/navbar/crown-symbol.png" alt=""> -->
                         <h3> we are open </h3>
                         <h1> fresh fruits </h1>
                         <p>
@@ -73,11 +78,36 @@
                         <a href="#" class="btn">order now</a>
                     </div>
                 </div>
+
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
 
     <!-- slider section end -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".home-slider", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 6500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            loop : true,
+            
+        });
+    </script>
+
 
     <script type="text/javascript">
         let menu = document.querySelector('#menu');
@@ -88,5 +118,7 @@
             navbar.classList.toggle('active');
         }
     </script>
+
+    
 </body>    
 </html>

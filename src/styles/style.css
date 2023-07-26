@@ -40,6 +40,7 @@ header
     align-items : center;
     justify-content: space-between;
     box-shadow : var(--box-shadow);
+    z-index : 100000;
 }
 
 header .logo img
@@ -148,6 +149,39 @@ header .icons #menu
     padding : .55rem 0;
     line-height : 1.6;
     font-weight: 200;
+}
+
+.btn
+{
+    margin-top : 1.1rem;
+    display : inline-block;
+    font-size: 1.65rem;
+    color : #fff;
+    border : .2rem solid rgba(205, 170, 124, 0.3);
+    background : transparent;
+    cursor : pointer;
+    padding : .75rem 3.1rem;
+    position : relative;
+    overflow : hidden;
+    z-index : 1;
+}
+
+.btn:before
+{
+    content : '';
+    width : 100%;
+    height : 100%;
+    background: var(--light-color);
+    z-index : -1;
+    position : absolute;
+    top : 0;
+    left : -100%;
+    transition: .6s;
+}
+
+.btn:hover.btn:before
+{
+    left : 0;
 }
 
 
