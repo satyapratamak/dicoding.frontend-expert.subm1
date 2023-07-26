@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root
+{
+    --black : #0a0a0ade;
+    --light-color : #e4c590;
+    --box-shadow : 0 .6rem 1.6rem rgba(0,0,0,.15);
+}
+
+*
+{
+    font-family: 'Roboto', sans-serif;
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    text-decoration : none;
+    border : none;
+    outline : none;
+    text-transform: uppercase;
+    transition: all .25s linear;
+}
+
+html
+{
+    font-size : 62%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* navbar style start */
+header
+{
+    position : fixed;
+    top : 0;
+    left : 0;
+    right : 0;
+    background : var(--black);
+    padding : 1.1rem 7.1%;
+    display : flex;
+    align-items : center;
+    justify-content: space-between;
+    box-shadow : var(--box-shadow);
+}
+
+header .logo img
+{
+    height: auto;
+}
+
+header .navbar a
+{
+    font-size : 1.8rem;
+    padding : .55rem 1.51rem;
+    color : var(--light-color);
+    border : .11rem solid transparent;
+}
+
+header .navbar a.active,
+header .navbar a:hover
+{
+    color : #fff;
+    border : .15rem solid rgba(198, 168, 129, 0.2);
+}
+
+header .icons i
+{
+    cursor : pointer;
+    margin-left : .55rem;
+    height: 4.45rem;
+    width : 4.45rem;
+    line-height: 4.45rem;
+    background: var(--light-color);
+    text-align: center;
+    font-size: 1.65rem;
+    color : #fff;
+}
+
+header .icons i:hover
+{
+    color : #fff;
+    background: var(--light-color);
+    transform: rotate(360deg);
+}
+
+header .icons #menu
+{
+    display : none;
+}
+
+/* navbar style end */
+
+
+/* slider style start */
+.home .home-slider .slide
+{
+    display : flex;
+    align-items : center;
+    height : 101vh;
+    justify-content: flex-start;
+}
+
+.home .home-slider .slide1
+{
+    background : url(../public/images/heros/hero-image_3.jpg);
+    
+}
+
+.home .home-slider .slide2 {
+    background: url(../public/images/navbar/slideshow-9.jpg);
+}
+
+.home .home-slider .slide3 {
+    background: url(../public/images/navbar/slideshow-11.jpg);
+}
+
+.home .home-slider .slide1,
+.home .home-slider .slide2,
+.home .home-slider .slide3
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .home-slider .slide .content 
+{
+    text-align : center;
+    padding-left : 8.9rem;
+}
+
+.home .home-slider .slide .content h3
+{
+    color : var(--light-color);
+    font-size : 3.1rem;
+    font-weight: 300;
+}
+
+.home .home-slider .slide .content h1
+{
+    color : #fff;
+    font-size: 7.9rem;
+}
+
+.home .home-slider .slide .content p 
+{
+    color: #e6e7e7;
+    font-size: 1.9rem;
+    letter-spacing: 1.1px;
+    padding : .55rem 0;
+    line-height : 1.6;
+    font-weight: 200;
+}
+
+
+
+
+
+
+/* slider style end */
+
+
+/* media query */
+@media (max-width : 991px)
+{
+    html
+    {
+        font-size : 56%;
+    }
+    header
+    {
+        padding : 1.1rem 2.1rem;
+    }
+    header .logo img
+    {
+        height : 6.9rem;
+    }
+}
+
+@media (max-width : 768px)
+{
+    /* navbar media query */
+    header .logo img
+    {
+        height : 6.9rem;
+    }
+
+    header .icons #menu
+    {
+        display: inline-block;
+    }
+
+    header .navbar
+    {
+        position : absolute;
+        top : 100%;
+        left : 0;
+        right : 0;
+        background: #eee;
+        border-top : .15rem solid rgba(198, 168, 129, 0.2);
+        border-bottom: .15rem solid rgba(198, 168, 129, 0.2);
+        padding : 0.9rem;
+        clip-path : polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    header .navbar.active
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a
+    {
+        display : block;
+        padding : 1.4rem;
+        margin : 1.1rem;
+        font-size: 1.9rem;
+        background: var(--black);
+    }
+}
