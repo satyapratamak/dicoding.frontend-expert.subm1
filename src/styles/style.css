@@ -303,6 +303,62 @@ section
 
 /* welcome style end */
 
+/* our menu style start */
+.our-menu
+{
+    background : url(../public/images/navbar/our-menu-bg-1.png) left top no-repeat, url(../public/images/navbar/our-menu-bg-3.jpg);
+}
+
+.our-menu .menu-container
+{
+    padding : 2.9rem 0.1;
+    display : grid;
+    grid-template-columns: repeat(auto-fit, minmax(50.5rem, 2fr));
+    gap : 5.1rem 10.1rem;
+}
+
+.our-menu .menu-container .item .item-name
+{
+    display : flex;
+    justify-content: space-between;
+    padding : 1.1rem 0.1;
+    margin-top : .6rem;
+
+}
+
+.our-menu .menu-container .item .item-menu
+{
+    padding : .55rem 0.1;
+
+}
+
+.our-menu .menu-container .item .item-name h2
+{
+    font-size : 3.1rem;
+    color : #e5e5e6;
+    font-weight: 300;
+}
+
+.our-menu .menu-container .item .item-menu h3
+{
+    font-size: 2.1rem;
+    color : #e5e5e6;
+    font-weight: 200;
+    display : inline-block;
+
+}
+
+.our-menu .menu-container .item .item-menu span
+{
+    width : 34%;
+    display: inline-block;
+    border : 1.1px dotted #e5e5e6;
+}
+
+
+
+/* our menu style end */
+
 
 /* media query */
 @media (max-width : 1200px)
