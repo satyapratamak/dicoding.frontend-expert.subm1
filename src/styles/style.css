@@ -68,6 +68,8 @@ header .navbar a:hover
 {
     color : #fff;
     border : .15rem solid rgba(198, 168, 129, 0.2);
+    min-height: 44px;
+    min-width: 44px;
 }
 
 header .icons i
@@ -174,6 +176,8 @@ header .icons #menu
     position : relative;
     overflow : hidden;
     z-index : 1;
+    min-height: 44px;
+    min-width: 44px;
 }
 
 .btn:before
@@ -355,6 +359,20 @@ section
     border : 1.1px dotted #e5e5e6;
 }
 
+.our-menu .menu-container .item .item-menu ul
+{
+    display : flex;
+    font-size: 1.6rem;
+    list-style: none;
+    padding : .85rem 0.1;
+    font-weight: 200;
+}
+
+.our-menu .menu-container .item .item-menu ul li a
+{
+    color : #b9b9b8;
+    text-transform: capitalize;
+}
 
 
 /* our menu style end */
@@ -403,6 +421,17 @@ section
     header .logo img
     {
         height : 6.9rem;
+    }
+
+    .our-menu .menu-container
+    {
+        grid-template-columns: repeat(auto-fit, minmax(31rem, 2fr));
+    }
+
+    .our-menu .menu-container .item .item-menu span
+    {
+        width : 14%;
+        
     }
 }
 
